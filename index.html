@@ -2026,10 +2026,10 @@ p.nominalBounds = new cjs.Rectangle(49.2,-35.5,308.5,69.3);
 				update = true;
 			}
 			Release(evt) {
-				this.gearW = this.gear.nominalBounds.width * .33;
-				this.gearH = this.gear.nominalBounds.height * .33;
-				this.placeW = this.place.nominalBounds.width * .33;
-				this.placeH = this.place.nominalBounds.height * .33;
+				this.gearW = this.gear.nominalBounds.width * .35;
+				this.gearH = this.gear.nominalBounds.height * .35;
+				this.placeW = this.place.nominalBounds.width * .35;
+				this.placeH = this.place.nominalBounds.height * .35;
 				update = true;
 				if (this.gear.x >= this.place.x + this.placeW || this.gear.x + this.gearW <= this.place.x || this.gear.y >= this.place.y + this.placeH || this.gear.y + this.gearH <= this.place.y) {
 					createjs.Tween.get(this.gear)
