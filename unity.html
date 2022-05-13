@@ -2460,7 +2460,7 @@ var createjs, AdobeAn;
 var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
 if (mraid.getState()==='loading'){
 
-	mraid.addEventListener(‘ready’, onSdkReady);
+	mraid.addEventListener('ready', onSdkReady);
 
 	} else {
 	    onSdkReady(); 
@@ -2470,6 +2470,16 @@ if (mraid.getState()==='loading'){
 	    mraid.addEventListener('viewableChange',viewableChangeHandler);
 	    if (mraid.isViewable()) {
  	       showMyAd(); 
+ 	   } else {
+ 	   	musicBG.pause();
+		failSFX.pause();
+		successSFX.pause();
+		timerSFX.pause();
+		alarmSFX.pause();
+		btnSFX.pause();
+		zombieSFX.pause();
+		gearSFX.pause();
+		whooshSFX.pause();
  	   }
 	}
 
