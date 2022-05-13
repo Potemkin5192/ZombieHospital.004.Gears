@@ -2458,34 +2458,7 @@ var createjs, AdobeAn;
 </script>
 <script>
 var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
-if (mraid.getState()==='loading'){
 
-	mraid.addEventListener('ready', onSdkReady);
-
-	} else {
-	    onSdkReady(); 
-	}
-
-	function onSdkReady() {
-	    mraid.addEventListener('viewableChange',viewableChangeHandler);
-	    if (mraid.isViewable()) {
- 	       showMyAd(); 
- 	   } else {
- 	   	musicBG.pause();
-		failSFX.pause();
-		successSFX.pause();
-		timerSFX.pause();
-		alarmSFX.pause();
-		btnSFX.pause();
-		zombieSFX.pause();
-		gearSFX.pause();
-		whooshSFX.pause();
- 	   }
-	}
-
-	function showMyAd() {
-	init();
-	}
 function init() {
 	canvas = document.getElementById("canvas");
 	anim_container = document.getElementById("animation_container");
@@ -2644,7 +2617,7 @@ function handleComplete(evt,comp) {
 </script>
 <!-- write your code here -->
 </head>
-<body style="margin:0px;">
+<body onload="init();" style="margin:0px;">
 	<div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:100%; height:100%">
 		<canvas id="canvas" width="100%" height="100%" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
 		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:100%; height:100%; position: absolute; left: 0px; top: 0px; display: block;">
